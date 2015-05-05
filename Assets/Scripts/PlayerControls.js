@@ -16,8 +16,8 @@ function FixedUpdate () {
 	var horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime; 
 	var vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
 	var pos : Vector3 = transform.position;
-	// pos.x = Mathf.Clamp(pos.x + horizontal, boundary.xMin, boundary.xMax);
-	// pos.z = Mathf.Clamp(pos.z + vertical, boundary.zMin, boundary.zMax);
+	pos.x = Mathf.Clamp(pos.x + horizontal, boundary.xMin, boundary.xMax);
+	pos.z = Mathf.Clamp(pos.z + vertical, boundary.zMin, boundary.zMax);
 	transform.position = pos;
 }
 
