@@ -1,6 +1,7 @@
-﻿//Level 1 Obstacle
+﻿//Level 1: firstPass, Level 2: secondPass, Level 3: thirdPass
 var firstPass : float = 500;
 var secondPass : float = 1000;
+var thirdPass : float = 1500;
 
 private var GameOver : boolean = false;
 

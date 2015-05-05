@@ -1,0 +1,41 @@
+Rock, Paper, Scissors Combat
+=======================
+-2D side scroller
+-3D first person perspective
+	-Sword beats Dragon
+	-Shield beats Skeleton
+	-Magic beats Goblin
+
+F.S.W.A.T.
+=======================
+-Kill the targetted amount of flies
+-Power Up which can eliminate every fly on the screen
+
+Ninja Jump
+=======================
+-Keep jumping on walls to avoid being swallowed up by the Clavum
+-Push the correct combinations to jump to the next set of walls
+	-If you fail to do so, you will be unable to move for 5 seconds
+
+Bomb Diffuser
+=======================
+-Keep the bo-bombs from reaching your side at a set amount of time
+-Be aware of the increasing speed
+
+Experiment
+=======================
+-Time to mix some chemicals!
+
+Streak Ball
+=======================
+-Reach the required amount of bounce before time runs out
+
+Free Fall
+=======================
+-Dodge obstacles as you descend from the sky
+-Reach the total distance goal to advance!
+
+Time Trial
+=======================
+-Race to the finish
+-Don't hit anything or else you'll lose time!
