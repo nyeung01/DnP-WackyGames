@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPass: 50
-  secondPass: 200
+  secondPass: 1000
 --- !u!4 &1832052861
 Transform:
   m_ObjectHideFlags: 0
@@ -308,7 +308,8 @@ MonoBehaviour:
   prefab: {fileID: 174330, guid: d05dff7a5025083489a684297d3d3318, type: 2}
   minOffset: 50
   maxOffset: 200
-  xRadius: 50
+  XOffset: 100
+  xRadius: 200
   yRadius: 5
   zRadius: 50
   timeOffset: 5
