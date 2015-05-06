@@ -95,6 +95,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 384305443}
+  - 114: {fileID: 384305444}
   m_Layer: 0
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -116,6 +117,19 @@ Transform:
   - {fileID: 1126118115}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &384305444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 384305442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4113c3e320eaf7f4e9d1a79aecc0bd48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam1: {fileID: 1126118119}
+  cam2: {fileID: 1964680621}
 --- !u!1 &915030983
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +277,7 @@ GameObject:
   - 81: {fileID: 1126118116}
   m_Layer: 0
   m_Name: LoadingCam
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,8 +380,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1832052861}
+  - {fileID: 1964680622}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!23 &1643510055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -467,7 +482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3278f67fb3f675e4392d4cc694d1c5aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 156142, guid: 9f8a4b0bd2019534493a796bf5f869d7, type: 2}
+  explosion:
+  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
 --- !u!1 &1832052859
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +498,7 @@ GameObject:
   - 4: {fileID: 1832052861}
   - 114: {fileID: 1832052860}
   - 114: {fileID: 1832052862}
+  - 114: {fileID: 1832052864}
   - 114: {fileID: 1832052863}
   m_Layer: 0
   m_Name: Loader
@@ -546,6 +567,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1643510053}
+--- !u!114 &1832052864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832052859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4203840740636ae4ca2ccbc983609177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 156912, guid: 9a9c4f82f12b7b7488a906a0182c4593, type: 2}
+  minOffset: 50
+  maxOffset: 200
+  XOffset: 100
+  xRadius: 200
+  yRadius: 5
+  zRadius: 50
+  timeOffset: 5
+  xRotation: 0
+  yRotation: 0
+  zRotation: 0
 --- !u!1 &1964680617
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,8 +673,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 6, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1643510054}
+  m_RootOrder: 1
 --- !u!114 &1964680623
 MonoBehaviour:
   m_ObjectHideFlags: 0

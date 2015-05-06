@@ -14,7 +14,7 @@ function Update() {
 		if (GetComponent(TrackDistance).GetDistance() >= firstPass) GetComponent(LoadFirstBatch).Generate();
 		if (GetComponent(TrackDistance).GetDistance() >= secondPass) {
 			GetComponent(LoadFirstBatch).enabled = false;
-			GetComponent(LoadSecondBatch);
+			GetComponent(LoadSecondBatch).Generate();
 		}
 	}
 }
