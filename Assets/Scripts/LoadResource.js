@@ -4,17 +4,29 @@ var secondPass : float = 1000;
 var thirdPass : float = 1500;
 
 private var GameOver : boolean = false;
+private var nextIndex;
+private var batches;
 
 function Start() {
-	
+	batches = GetComponents(LoadFirstBatch);
+	nextIndex = 0;
 }
 
 function Update() {
 	if (!GameOver){
-		if (GetComponent(TrackDistance).GetDistance() >= firstPass) GetComponent(LoadFirstBatch).Generate();
+		for(var obstacle in batches) {
+			obstacle.enabled = true;
+		}
+		batches[nextIndex].Generate();
+		if (GetComponent(TrackDistance).GetDistance() >= firstPass) {
+			nextIndex = 1;
+			batches[nextIndex].Generate();
+			//GetComponent(LoadFirstBatch).Generate();
+		}
 		if (GetComponent(TrackDistance).GetDistance() >= secondPass) {
-			GetComponent(LoadFirstBatch).enabled = false;
-			GetComponent(LoadSecondBatch).Generate();
+			batches[nextIndex].enabled = false;
+			nextIndex = 2;
+			//GetComponent().Generate();
 		}
 	}
 }

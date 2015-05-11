@@ -87,6 +87,119 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &203099737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 203099744}
+  - 20: {fileID: 203099738}
+  - 92: {fileID: 203099743}
+  - 124: {fileID: 203099742}
+  - 81: {fileID: 203099741}
+  - 54: {fileID: 203099740}
+  - 114: {fileID: 203099739}
+  m_Layer: 0
+  m_Name: Death Cam
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &203099738
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 71
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!114 &203099739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0868eb63da0344e81cb0a44089fa35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 9.80000019
+--- !u!54 &203099740
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!81 &203099741
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+--- !u!124 &203099742
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+--- !u!92 &203099743
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+--- !u!4 &203099744
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_LocalRotation: {x: .50000006, y: 0, z: 0, w: .866025388}
+  m_LocalPosition: {x: 0, y: 7.88000011, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &384305442
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &384305443
 Transform:
   m_ObjectHideFlags: 0
@@ -125,11 +238,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 384305442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4113c3e320eaf7f4e9d1a79aecc0bd48, type: 3}
+  m_Script: {fileID: 11500000, guid: 55d3e2bb5f664de4d9e19538ae52a329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam1: {fileID: 1126118119}
   cam2: {fileID: 1964680621}
+  cam3: {fileID: 203099738}
 --- !u!1 &915030983
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +496,7 @@ Transform:
   - {fileID: 1832052861}
   - {fileID: 1964680622}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!23 &1643510055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -498,6 +612,8 @@ GameObject:
   - 4: {fileID: 1832052861}
   - 114: {fileID: 1832052860}
   - 114: {fileID: 1832052862}
+  - 114: {fileID: 1832052866}
+  - 114: {fileID: 1832052865}
   - 114: {fileID: 1832052864}
   - 114: {fileID: 1832052863}
   m_Layer: 0
@@ -544,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba17ef34838a1545b79d679ea0e404b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 174330, guid: d05dff7a5025083489a684297d3d3318, type: 2}
+  prefab: {fileID: 124324, guid: c26be9502143e954d8ff8f6308aa2ff9, type: 2}
   minOffset: 50
   maxOffset: 200
   XOffset: 100
@@ -553,8 +669,8 @@ MonoBehaviour:
   zRadius: 50
   timeOffset: 5
   xRotation: 0
-  yRotation: 0
-  zRotation: -90
+  yRotation: 90
+  zRotation: 0
 --- !u!114 &1832052863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,7 +689,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832052859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4203840740636ae4ca2ccbc983609177, type: 3}
   m_Name: 
@@ -588,6 +704,50 @@ MonoBehaviour:
   timeOffset: 5
   xRotation: 0
   yRotation: 0
+  zRotation: 0
+--- !u!114 &1832052865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832052859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba17ef34838a1545b79d679ea0e404b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 156912, guid: 9a9c4f82f12b7b7488a906a0182c4593, type: 2}
+  minOffset: 50
+  maxOffset: 200
+  XOffset: 100
+  xRadius: 200
+  yRadius: 5
+  zRadius: 50
+  timeOffset: 5
+  xRotation: 0
+  yRotation: 0
+  zRotation: 0
+--- !u!114 &1832052866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832052859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba17ef34838a1545b79d679ea0e404b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 189910, guid: 6685d3b1cfaa4f743aa4aa55c530c851, type: 2}
+  minOffset: 25
+  maxOffset: 50
+  XOffset: 100
+  xRadius: 200
+  yRadius: 5
+  zRadius: 50
+  timeOffset: 5
+  xRotation: 0
+  yRotation: 90
   zRotation: 0
 --- !u!1 &1964680617
 GameObject:

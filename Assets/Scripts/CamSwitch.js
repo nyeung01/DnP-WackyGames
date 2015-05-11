@@ -6,7 +6,9 @@ var cam1 : Camera;
 
 var cam2 : Camera;
 
-function Start() { cam1.enabled = true; cam2.enabled = false; }
+var cam3 : Camera;
+
+function Start() { cam1.enabled = true; cam2.enabled = false; cam3.enabled = false;}
 
 function Update() {
 
@@ -14,4 +16,8 @@ function Update() {
      cam1.enabled = false;
      cam2.enabled = true;
      }
+
+  if (cam2 == null){
+  	cam3.enabled = true;
+  }
  }
