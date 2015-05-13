@@ -15,3 +15,9 @@ function Update() {
 	DistanceTraveled += Vector3.Distance(player.transform.position, lastPosition);
 	lastPosition = player.transform.position;
 }
+
+function ConvertDistance(){
+	var converted = DistanceTraveled/10;
+	var rounder = Mathf.RoundToInt(converted);
+	return rounder;
+}
