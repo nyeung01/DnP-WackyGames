@@ -101,6 +101,8 @@ GameObject:
   - 81: {fileID: 203099741}
   - 54: {fileID: 203099740}
   - 114: {fileID: 203099739}
+  - 114: {fileID: 203099745}
+  - 114: {fileID: 203099746}
   m_Layer: 0
   m_Name: Death Cam
   m_TagString: MainCamera
@@ -126,7 +128,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 71
+  field of view: 109
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -173,7 +175,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 203099737}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &203099742
 Behaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +202,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &203099745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041d71cdebb51564c88e0d6af545465e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1643510054}
+--- !u!114 &203099746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203099737}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cea49a5c8fb184e91c5ca04ff3ddc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  tilt: 0
+  boundary:
+    xMin: 0
+    xMax: 0
+    zMin: 0
+    zMax: 0
 --- !u!1 &384305442
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +508,7 @@ GameObject:
   - 114: {fileID: 1643510058}
   - 114: {fileID: 1643510060}
   - 114: {fileID: 1643510061}
+  - 96: {fileID: 1643510062}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -596,12 +629,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3278f67fb3f675e4392d4cc694d1c5aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion:
-  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
-  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
-  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
-  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
-  - {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+  explosion: {fileID: 136860, guid: 1f43f85d11504ef4ca55277bf141cfbe, type: 2}
+--- !u!96 &1643510062
+TrailRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643510053}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: 1.5
+  m_StartWidth: 1
+  m_EndWidth: .100000001
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4278190335
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4278190270
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 83
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 1
 --- !u!1 &1832052859
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,8 +684,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1832052861}
   - 114: {fileID: 1832052860}
-  - 114: {fileID: 1832052862}
   - 114: {fileID: 1832052866}
+  - 114: {fileID: 1832052862}
   - 114: {fileID: 1832052865}
   - 114: {fileID: 1832052864}
   - 114: {fileID: 1832052863}
@@ -635,8 +708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPass: 50
-  secondPass: 1000
-  thirdPass: 1500
+  secondPass: 400
+  finalDistance: 1000
 --- !u!4 &1832052861
 Transform:
   m_ObjectHideFlags: 0
@@ -742,7 +815,7 @@ MonoBehaviour:
   minOffset: 25
   maxOffset: 50
   XOffset: 100
-  xRadius: 200
+  xRadius: 50
   yRadius: 5
   zRadius: 50
   timeOffset: 5
