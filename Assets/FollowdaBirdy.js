@@ -11,9 +11,13 @@
 		var step = speed * Time.deltaTime;
 		
 		// Move our position a step closer to the target.
-		if( target != null)
+//		if( target != null)
+//		{
+//		GetComponent.Falling.enabled = false;
+//		}
+		if(GameObject.Find ("Player") != null)
 		{
-		GetComponent.Falling.enabled = false;
-		}
+		transform.LookAt(target);
 		transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+		}
 	}
