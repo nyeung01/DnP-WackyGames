@@ -118,7 +118,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .200542971, g: .0408736952, b: .397058845, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -356,8 +356,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
-  m_Intensity: 1
+  m_Color: {r: .970588207, g: .87293756, b: .60661763, a: 1}
+  m_Intensity: 2.25999999
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -691,8 +691,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPass: 50
-  secondPass: 400
-  finalDistance: 1000
+  secondPass: 800
+  finalDistance: 100
 --- !u!4 &1832052861
 Transform:
   m_ObjectHideFlags: 0
@@ -717,13 +717,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 124324, guid: c26be9502143e954d8ff8f6308aa2ff9, type: 2}
-  minOffset: 50
-  maxOffset: 200
+  minOffset: 60
+  maxOffset: 100
   XOffset: 100
-  xRadius: 200
-  yRadius: 5
+  xRadius: 50
+  yRadius: 10
   zRadius: 50
-  timeOffset: 5
+  timeOffset: 3
   xRotation: 0
   yRotation: 90
   zRotation: 0
@@ -774,12 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 156912, guid: 9a9c4f82f12b7b7488a906a0182c4593, type: 2}
   minOffset: 50
-  maxOffset: 200
+  maxOffset: 100
   XOffset: 100
-  xRadius: 200
+  xRadius: 50
   yRadius: 5
   zRadius: 50
-  timeOffset: 5
+  timeOffset: 3
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -795,8 +795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 189910, guid: 6685d3b1cfaa4f743aa4aa55c530c851, type: 2}
-  minOffset: 25
-  maxOffset: 50
+  minOffset: 50
+  maxOffset: 100
   XOffset: 100
   xRadius: 50
   yRadius: 5
@@ -817,8 +817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 141282, guid: af50bb9d16f116a49b2a8928b35319c5, type: 2}
-  minOffset: 100
-  maxOffset: 200
+  minOffset: 50
+  maxOffset: 100
 --- !u!1 &1964680617
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,8 +869,8 @@ Camera:
   m_GameObject: {fileID: 1964680617}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .143814892, g: .977941155, b: .770847797, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
