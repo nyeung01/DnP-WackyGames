@@ -8,6 +8,7 @@ var finalDistance : float = 1000;
 private var GameOver : boolean = false;
 private var nextIndex;
 private var batches;
+private var TimeReset : float = 0.0;
 
 function Start() {
 	batches = GetComponents(LoadFirstBatch);
@@ -44,6 +45,8 @@ function Update() {
 		if (GetComponent(TrackDistance).GetDistance() >= finalDistance) {
 			winState = true;
 			GetComponent(LoadEarth).Generate();
+			TimeReset += Time.deltaTime;
+			if (TimeReset >= 2) Application.LoadLevel("Freefall");
 			//nextIndex = 4;
 			//GetComponent().Generate();
 		}
@@ -65,7 +68,7 @@ function OnGUI(){
 		}
 		if(nextIndex == 2){
 		GUI.backgroundColor = Color.yellow;
-			GUI.Button(Rect(10,10,150,25), "Level 2: Birds!");
+			GUI.Button(Rect(10,10,150,25), "Level 2: Moar Planes!");
 		}
 	}
 	else{
