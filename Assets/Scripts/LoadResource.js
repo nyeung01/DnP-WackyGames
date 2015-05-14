@@ -70,7 +70,7 @@ function OnGUI(){
 	}
 	else{
 		GUI.backgroundColor = Color.green;
-		GUI.Box(Rect(10,10,150,25), "Good Job Sky Diver!");
+		GUI.Button(Rect(10,10,220,25), "Level 3: You forgot the Parachute!");
 	}
 //	if(nextIndex == 4){
 //		GUI.Box(Rect(10,10,100,25), "Good Job Sky Diver!");

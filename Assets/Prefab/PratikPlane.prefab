@@ -134,9 +134,9 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 1.12
-  m_StartWidth: 1
-  m_EndWidth: .00999999978
+  m_Time: 1.99000001
+  m_StartWidth: 1.37
+  m_EndWidth: .460000008
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -153,7 +153,7 @@ TrailRenderer:
     m_Color[4]:
       serializedVersion: 2
       rgba: 16777215
-  m_MinVertexDistance: .100000001
+  m_MinVertexDistance: .550000012
   m_Autodestruct: 1
 --- !u!114 &11401922
 MonoBehaviour:
@@ -181,8 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e875a1babf591094ab856e89ea8fa433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 20
-  increase: 0
+  timer: 15
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
