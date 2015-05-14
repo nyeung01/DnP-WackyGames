@@ -2,7 +2,7 @@
 
 var timer : float = 20;
 
-var increase : float = 0;
+//var increase : float = 0;
 function Start () {
 
 }
