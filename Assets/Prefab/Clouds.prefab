@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: ba15e8c19269bd34f85e9a07e31ff6a0, type: 2}
+  - {fileID: 2100000, guid: 5f859aaeceb3b6b49830620e2f47916a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 20
-  increase: 0
 --- !u!114 &11476632
 MonoBehaviour:
   m_ObjectHideFlags: 1
